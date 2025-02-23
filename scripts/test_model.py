@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
 
 # Load the dataset
-data = pd.read_csv("C:\\dat1\\housing.csv")
+data = pd.read_csv("data\housing_data.csv")
 
 # Separate features and target variable
 X = data.drop("price", axis=1)
@@ -17,7 +17,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 
 # Load the trained model from file
-with open("C:\\dat1\\models\\model.pkl", "rb") as f:
+with open("models\model.pkl", "rb") as f:
     model = pickle.load(f)
 
 # Make predictions on the test set
