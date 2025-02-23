@@ -4,7 +4,7 @@ from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler
 
 # Load the dataset
-data = pd.read_csv("C:\\dat1\\housing.csv")
+data = pd.read_csv("data\housing_data.csv")
 print("Initial data:")
 print(data.head())
 
@@ -27,6 +27,6 @@ data[['sqft', 'bedrooms']] = scaler.fit_transform(data[['sqft', 'bedrooms']])
 print("\nFeature scaling applied to 'sqft' and 'bedrooms'.")
 
 # Save the preprocessed data to a new CSV file
-output_path = "C:\\dat1\\housing_preprocessed.csv"
+output_path = "data\housing_preprocessed.csv"
 data.to_csv(output_path, index=False)
 print(f"\nPreprocessed data saved to {output_path}")
