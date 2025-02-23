@@ -1,10 +1,9 @@
-
 # feature_engineering.py
 import pandas as pd
 import numpy as np
 
 # Load the dataset
-data = pd.read_csv("C:\\dat1\\housing.csv")
+data = pd.read_csv("data\housing_data.csv")
 
 # Feature Engineering
 
@@ -22,7 +21,7 @@ data['log_price'] = np.log(data['price'])
 data['sqft_bedrooms'] = data['sqft'] * data['bedrooms']
 
 # Save the engineered dataset to a new CSV file
-output_path = "C:\\dat1\\housing_engineered.csv"
+output_path = "data\housing_engineered.csv"
 data.to_csv(output_path, index=False)
 
 print(f"Feature engineering complete. Engineered dataset saved to {output_path}")
