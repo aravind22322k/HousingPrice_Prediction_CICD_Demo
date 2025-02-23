@@ -5,7 +5,7 @@ import pickle
 
 
 # Load data
-data = pd.read_csv("C:\\dat1\\housing.csv")  # Path relative to repository root
+data = pd.read_csv("data\housing_data.csv")  # Path relative to repository root
 X = data.drop("price", axis=1)
 y = data["price"]
 data.head()
@@ -22,7 +22,7 @@ model.fit(X_train, y_train)
 
 
 # Save model
-with open("C:\\dat1\\models\\model.pkl", "wb") as f:  # Path relative to repository root
+with open("models\model.pkl", "wb") as f:  # Path relative to repository root
     pickle.dump(model, f)
 
 
